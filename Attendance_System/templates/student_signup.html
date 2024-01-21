@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Signup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Musseo&family=Montserrat:wght@200;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+
+    <style>
+        /* signup_student.css */
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        h2 {
+    color: #333;
+    font-family: Titillium Web,sans-serif;
+    font-weight:bold;
+    text-align:center!important;        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .form-text {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+        }
+
+        .form-control-file {
+            background-color: #f7f7f7;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+
+        .header {
+            background-color: #007bff;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            /* Center-align items horizontally */
+            align-items: center;
+        }
+
+        .header a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline;
+        }
+
+        label{
+            font-family:'Titillium Web', sans-serif;
+            font-weight:bold;
+            font-size:14px;
+        }
+        #attendanceSys {
+            font-family: 'Montserrat', sans-serif;
+            font-style: bold;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 70px;
+            text-align: center;
+            color: #007bff;
+            padding: 20px;
+            margin: 0;
+        }
+                #signup-btn:disabled{
+            background-color: rgba(0,0,0,.12);
+        }
+        #signup-btn {
+            background-color:#3f51b5;
+            border-color:#3f51b5;
+            color: #fff;
+            padding: 3px 20px;
+            font-size: 15px;
+            border-radius:4px;
+            font-family:Helvetica Neue,sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Student Signup</h2>
+                <form action="/student/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Username</label>
+                        <input type="text" class="form-control" id="name" name="name" required placeholder="Please enter your Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="roll_no">Roll Number</label>
+                        <input type="text" class="form-control" id="roll_no" name="roll_no" required placeholder="Please enter your Roll Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="pass1" name="pass1" required placeholder="Set a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" class="form-control" id="pass2" name="pass2" required placeholder="Set a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="images">Upload Your image</label>
+                        <input type="file" class="form-control mb-3" name="image" id="image">
+                    </div>
+                    <p>Already, Have an account? <a href="/" style="            text-decoration: none;
+            font-family:'Titillium Web', sans-serif;
+            font:14px;
+            color:#3f51b5;
+            font-weight:bold;">Login</a></p>
+                    <button type="submit" class="btn btn-primary" id="signup-btn">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
