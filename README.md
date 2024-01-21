@@ -4,10 +4,10 @@ This is an attendance system which automatically marks attendance on uploading g
 ## How to get this website on your device?
 
 - Clone this repo using
-  `git clone https://github.com/tekksick/attendance-system-using-faceRecognition`
+  `git clone https://github.com/saipranaydeep/Face_recognition_Attendance_System.git`
 
 - Go into the root of this directory.
-  `cd attendance-system-using-faceRecognition`
+  `cd Attendance_System`
 
 - Now install the required dependencies.
   `pip install -r requirements.txt`
