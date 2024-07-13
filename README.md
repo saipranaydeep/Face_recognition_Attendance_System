@@ -16,7 +16,7 @@ This is an attendance system which automatically marks attendance on uploading g
   
 -  Then download this dlib file. `https://drive.google.com/file/d/11dkOCYUd72wikVIXRGiUclvKB3FHbiHY/view?usp=sharing`
 
-- To run the game, run the following command,
+- Run the following command,
   `python manage.py runserver`
 
 - Open a web browser and navigate to `http://localhost:5000` to access the administration interface.
@@ -32,5 +32,4 @@ This is an attendance system which automatically marks attendance on uploading g
 ## For developers
 
 - This website uses a face_recognition (a module of python) based model.
-- Other models like YOLO can also be used by changing this file.
 - Make sure to add the dependencies in the requirements.txt file.
